@@ -18,6 +18,17 @@ public class GameOfLifeRules {
 					val =DEAD;
 					
 				}				
+			} 
+			
+			else {
+				
+				if(neighbours == 3 ) {
+					
+					val = ALIVE;
+				}
+				
+				
+				
 			}
 		
 		
