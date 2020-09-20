@@ -13,6 +13,8 @@ public class GameOfLifeRulesTest {
 	public static final int THREE_NEIGHBOURS = 3;
 	public static final int FOUR_NEIGHBOURS = 4;
 
+	GameOfLifeRules  rules = new GameOfLifeRules();
+	
 	
 	@Test
 	public void lessThanTwoLiveNeighboursKillsLiveCell() {
@@ -57,7 +59,7 @@ public class GameOfLifeRulesTest {
 	
 	private int liveCellWith(int neighbours) {
 
-		return new GameOfLifeRules().nextState(ALIVE, neighbours);
+		return nextState(ALIVE, neighbours);
 
 	}
 
@@ -65,11 +67,16 @@ public class GameOfLifeRulesTest {
 
 	private int deadCellWith(int neighbours) {
 
-		return new GameOfLifeRules().nextState(DEAD, neighbours);
+		return nextState(DEAD, neighbours);
 
 	}
 
-	
+	private int nextState(int cellState, int neighbours) {
+		
+		return  rules.nextState(cellState, neighbours);
+		
+		
+	}
 	
 	
 	
