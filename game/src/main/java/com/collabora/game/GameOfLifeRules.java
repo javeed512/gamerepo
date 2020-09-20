@@ -6,16 +6,17 @@ public class GameOfLifeRules {
 	
 	public static final int DEAD =0;
 	
+	enum State{ALIVE,DEAD};
 	
-	public int nextState(int cell, int neighbours) {
+	public State nextState(final State currentState, int neighbours) {
 		
+		State nextState = currentState;
 	
-			int val = cell;
-			if(cell == ALIVE) {
+			if(currentState == State.ALIVE) {
 				
 				if(neighbours < 2 || neighbours >3) {
 					
-					val =DEAD;
+					nextState =State.DEAD;
 					
 				}				
 			} 
@@ -24,7 +25,7 @@ public class GameOfLifeRules {
 				
 				if(neighbours == 3 ) {
 					
-					val = ALIVE;
+					nextState = State.ALIVE;
 				}
 				
 				
@@ -32,7 +33,7 @@ public class GameOfLifeRules {
 			}
 		
 		
-		return val;
+		return nextState;
 		
 	}
 	

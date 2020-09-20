@@ -1,7 +1,7 @@
 package com.collabora.game;
 
-import static com.collabora.game.GameOfLifeRules.ALIVE;
-import static com.collabora.game.GameOfLifeRules.DEAD;
+import static com.collabora.game.GameOfLifeRules.State.ALIVE;
+import static com.collabora.game.GameOfLifeRules.State.DEAD;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -57,7 +57,7 @@ public class GameOfLifeRulesTest {
 	
 	
 	
-	private int liveCellWith(int neighbours) {
+	private GameOfLifeRules.State liveCellWith(int neighbours) {
 
 		return nextState(ALIVE, neighbours);
 
@@ -65,13 +65,13 @@ public class GameOfLifeRulesTest {
 
 	
 
-	private int deadCellWith(int neighbours) {
+	private GameOfLifeRules.State deadCellWith(int neighbours) {
 
 		return nextState(DEAD, neighbours);
 
 	}
 
-	private int nextState(int cellState, int neighbours) {
+	private GameOfLifeRules.State nextState(GameOfLifeRules.State cellState, int neighbours) {
 		
 		return  rules.nextState(cellState, neighbours);
 		
