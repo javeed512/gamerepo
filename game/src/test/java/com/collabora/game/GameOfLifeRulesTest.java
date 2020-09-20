@@ -8,12 +8,12 @@ import org.junit.Test;
 
 public class GameOfLifeRulesTest {
 
-	public static final int ONE_NEIGHBOUR = 1;
-	public static final int TWO_NEIGHBOURS = 2;
-	public static final int THREE_NEIGHBOURS = 3;
-	public static final int FOUR_NEIGHBOURS = 4;
+	private static final int ONE_NEIGHBOUR = 1;
+	private static final int TWO_NEIGHBOURS = 2;
+	private static final int THREE_NEIGHBOURS = 3;
+	private static final int FOUR_NEIGHBOURS = 4;
 
-	GameOfLifeRules  rules = new GameOfLifeRules();
+	private GameOfLifeRules  rules = new GameOfLifeRules();
 	
 	
 	@Test
