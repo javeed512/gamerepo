@@ -6,6 +6,18 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+
+/*
+ * @Description: Test cases for Program Game of Life to test  4 basic rules of game
+ * 
+ * @Author: JAVEED
+ * 
+ * @Date: 20-Sept-2020
+ *  
+ */
+
+
+
 public class GameOfLifeRulesTest {
 
 	private static final int ONE_NEIGHBOUR = 1;
