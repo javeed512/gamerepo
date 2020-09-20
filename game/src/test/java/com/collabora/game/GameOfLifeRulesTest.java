@@ -13,12 +13,7 @@ public class GameOfLifeRulesTest {
 	public static final int THREE_NEIGHBOURS = 3;
 	public static final int FOUR_NEIGHBOURS = 4;
 
-	private int liveCellWith(int neighbours) {
-
-		return new GameOfLifeRules().nextState(ALIVE, neighbours);
-
-	}
-
+	
 	@Test
 	public void lessThanTwoLiveNeighboursKillsLiveCell() {
 
@@ -46,5 +41,49 @@ public class GameOfLifeRulesTest {
 		assertEquals(liveCellWith(THREE_NEIGHBOURS), ALIVE);
 
 	}
+	
+	
+	
+	
+	
+	@Test
+	public void threeNeighbourRestoreDeadCellSurvives() {
+
+		assertEquals(deadCellWith(THREE_NEIGHBOURS), ALIVE);
+
+	}
+	
+	
+	
+	private int liveCellWith(int neighbours) {
+
+		return new GameOfLifeRules().nextState(ALIVE, neighbours);
+
+	}
+
+	
+
+	private int deadCellWith(int neighbours) {
+
+		return new GameOfLifeRules().nextState(DEAD, neighbours);
+
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
